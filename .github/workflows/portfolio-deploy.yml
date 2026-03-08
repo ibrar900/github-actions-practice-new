@@ -33,6 +33,8 @@ jobs: # define the job
             # STEP 3
           - name: Upload static files # upload static files from github workspace
             uses: actions/upload-pages-artifacts@v4 #packing and uploading artifact that can be deployed
+            with:
+              path: "." # path to the artifact to be uploaded, in this case entire codebase
 
             # deploy the portfolio website to github pages
             # STEP 4
