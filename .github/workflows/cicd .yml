@@ -1,5 +1,5 @@
 # this is name of the workflow that will be displayed in the Actions tab
-name: 
+name: CICD
 
 # Manual click (deliver) workflow whenever user needs
 on: 
