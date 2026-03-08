@@ -1,0 +1,40 @@
+name: Portfolio # Name of workflow
+
+on: # trigger the workflow when there a push command to main branch
+    push:
+        branches: [main]
+
+permissions: # permissions give globally
+      pages: write # permission to peploy to pages
+      id-token: write # to verify the deployment originates from the repository
+
+jobs: # define the job
+    deploy: # name of job
+        runs-on: ubuntu-latest # specify the opetating system for job to run
+
+        environment:
+            name: github-pages
+            url: ${{ steps.deployment.outputs.page_url }} # url of the deployed website output
+
+        steps: # list of steps to ececute in the job
+            # get access to your portfolio code via pre-built actions
+            # clones or checks out the code where this workflow is written
+            # STEP 1
+          - name: Checkput code # code will clone from worlflow repository
+            uses: actions/checkout@v4 # enire code will get accesed by GITHUB WORKSPACE
+
+            # setup GitHub pages to deploy the portfolio website
+            # STEP 2
+          - name: Setup GitHub Pages # can create and host website on github pages
+            uses: actions/configure-pages@v4 # enable Pages and extract metadata about a site and used to configure various static site generators
+
+            # static code artifacts (load balancer,dabase,server) fetch fast
+            # STEP 3
+          - name: Upload static files # upload static files from github workspace
+            uses: actions/upload-pages-artifacts@v4 #packing and uploading artifact that can be deployed
+
+            # deploy the portfolio website to github pages
+            # STEP 4
+          - name: Deploy to GitHub Pages
+            uses: actions/deploy-pages@v4
+
