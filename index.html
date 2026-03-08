@@ -1,290 +1,1523 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Ibrar Mahammad | DevOps & Cloud System Engineer</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-scroll-behavior:smooth;
-}
-
-body{
-background:#0f172a;
-color:white;
-}
-
-/* NAVBAR */
-
-nav{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 10%;
-background:#020617;
-position:sticky;
-top:0;
-z-index:100;
-}
-
-nav h2{
-color:#38bdf8;
-}
-
-nav ul{
-display:flex;
-gap:30px;
-list-style:none;
-}
-
-nav a{
-text-decoration:none;
-color:white;
-font-weight:500;
-}
-
-nav a:hover{
-color:#38bdf8;
-}
-
-/* HERO */
-
-.hero{
-height:90vh;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-padding:40px;
-}
-
-.hero h1{
-font-size:50px;
-margin-bottom:20px;
-}
-
-.hero span{
-color:#38bdf8;
-}
-
-.hero p{
-max-width:700px;
-margin:auto;
-opacity:.8;
-}
-
-.hero-btn{
-margin-top:30px;
-display:inline-block;
-padding:12px 25px;
-border-radius:8px;
-background:#38bdf8;
-color:black;
-font-weight:600;
-text-decoration:none;
-}
-
-/* SECTIONS */
-
-section{
-padding:80px 10%;
-}
-
-.section-title{
-font-size:32px;
-margin-bottom:40px;
-color:#38bdf8;
-}
-
-/* ABOUT */
-
-.about p{
-max-width:800px;
-line-height:1.8;
-opacity:.9;
-}
-
-/* SKILLS */
-
-.skills{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:20px;
-}
-
-.skill{
-background:#020617;
-padding:25px;
-border-radius:10px;
-border:1px solid #1e293b;
-}
-
-.skill:hover{
-border-color:#38bdf8;
-transform:translateY(-5px);
-transition:.3s;
-}
-
-/* JOURNEY */
-
-.timeline{
-display:grid;
-gap:20px;
-}
-
-.timeline-item{
-background:#020617;
-padding:20px;
-border-left:4px solid #38bdf8;
-}
-
-/* FOOTER */
-
-footer{
-text-align:center;
-padding:40px;
-background:#020617;
-opacity:.7;
-}
-
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ibrar Mahammad | DevOps & Cloud Engineer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Variables */
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary: #0f172a;
+            --light: #f8fafc;
+            --gray: #64748b;
+            --dark-gray: #334155;
+            --transition: all 0.3s ease;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --radius: 8px;
+        }
+        
+        /* Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: var(--secondary);
+            background-color: var(--light);
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5 {
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+        
+        p {
+            margin-bottom: 1.5rem;
+        }
+        
+        img {
+            max-width: 100%;
+        }
+        
+        a {
+            text-decoration: none;
+            color: var(--primary);
+            transition: var(--transition);
+        }
+        
+        a:hover {
+            color: var(--primary-dark);
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.8rem;
+            background-color: var(--primary);
+            color: white;
+            border-radius: var(--radius);
+            font-weight: 600;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            text-align: center;
+        }
+        
+        .btn:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow);
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+        
+        .btn-outline:hover {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        section {
+            padding: 5rem 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title h2:after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 4px;
+            background: var(--primary);
+            bottom: -10px;
+            left: 25%;
+            border-radius: 2px;
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+        
+        /* Header Styles */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            transition: var(--transition);
+        }
+        
+        header.scrolled {
+            padding: 0.5rem 0;
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 0;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--secondary);
+        }
+        
+        .logo span {
+            color: var(--primary);
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 2rem;
+        }
+        
+        .nav-links a {
+            color: var(--secondary);
+            font-weight: 500;
+            position: relative;
+        }
+        
+        .nav-links a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            bottom: -5px;
+            left: 0;
+            transition: var(--transition);
+        }
+        
+        .nav-links a:hover:after {
+            width: 100%;
+        }
+        
+        .mobile-toggle {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, #f0f4ff 0%, #e6f0ff 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+        }
+        
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--dark-gray);
+            margin-bottom: 2rem;
+        }
+        
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .stat-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: var(--transition);
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            color: var(--dark-gray);
+            font-weight: 500;
+        }
+        
+        .hero-image {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 45%;
+            max-width: 600px;
+            z-index: 1;
+            opacity: 0.9;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(-50%) translateX(0); }
+            50% { transform: translateY(-53%) translateX(10px); }
+        }
+        
+        /* Skills Section */
+        .skills {
+            background-color: white;
+        }
+        
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .skill-category {
+            background: #f8fafc;
+            border-radius: var(--radius);
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .skill-category:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .skill-category h3 {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+        
+        .skill-category h3 i {
+            margin-right: 0.75rem;
+            font-size: 1.5rem;
+        }
+        
+        .skill-list {
+            list-style: none;
+        }
+        
+        .skill-list li {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #e2e8f0;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .skill-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .skill-level {
+            height: 8px;
+            background-color: #e2e8f0;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-top: 0.5rem;
+        }
+        
+        .skill-progress {
+            height: 100%;
+            background-color: var(--primary);
+            border-radius: 4px;
+        }
+        
+        /* Experience Section */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .timeline:before {
+            content: '';
+            position: absolute;
+            width: 2px;
+            background-color: var(--gray);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -1px;
+        }
+        
+        .timeline-item {
+            padding: 1.5rem 2.5rem;
+            position: relative;
+            width: 50%;
+            box-sizing: border-box;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+        
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+        
+        .timeline-content {
+            padding: 2rem;
+            background-color: white;
+            position: relative;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+        
+        .timeline-content h3 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .timeline-content .date {
+            color: var(--gray);
+            font-weight: 500;
+            margin-bottom: 1rem;
+            display: block;
+        }
+        
+        .timeline-item:nth-child(odd):before {
+            content: '';
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            background-color: var(--primary);
+            border: 3px solid white;
+            top: 2.5rem;
+            right: -8px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        
+        .timeline-item:nth-child(even):before {
+            content: '';
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            background-color: var(--primary);
+            border: 3px solid white;
+            top: 2.5rem;
+            left: -8px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        
+        /* Projects Section */
+        .projects {
+            background-color: #f8fafc;
+        }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+        
+        .project-card {
+            background: white;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        
+        .project-img {
+            height: 200px;
+            background: linear-gradient(45deg, var(--primary), var(--primary-dark));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+        }
+        
+        .project-content {
+            padding: 1.5rem;
+        }
+        
+        .project-content h3 {
+            margin-bottom: 0.75rem;
+            color: var(--primary);
+        }
+        
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+        
+        .tag {
+            background-color: #e0e7ff;
+            color: var(--primary-dark);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        
+        /* Learning Journey Section */
+        .learning-journey {
+            background-color: white;
+        }
+        
+        .journey-container {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .journey-container:before {
+            content: '';
+            position: absolute;
+            height: 4px;
+            background-color: var(--primary);
+            top: 50%;
+            left: 0;
+            right: 0;
+            transform: translateY(-50%);
+        }
+        
+        .journey-step {
+            position: relative;
+            width: calc(50% - 40px);
+            padding: 2rem;
+            background: white;
+            box-shadow: var(--shadow);
+            border-radius: var(--radius);
+            margin-bottom: 3rem;
+        }
+        
+        .journey-step:nth-child(odd) {
+            margin-left: auto;
+        }
+        
+        .journey-step-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .journey-step h3 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .journey-step .date {
+            color: var(--gray);
+            font-weight: 500;
+            margin-bottom: 1rem;
+            display: block;
+        }
+        
+        .journey-step:nth-child(odd):before {
+            content: '';
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            background-color: var(--primary);
+            border: 3px solid white;
+            top: 2.5rem;
+            right: -8px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        
+        .journey-step:nth-child(even):before {
+            content: '';
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            background-color: var(--primary);
+            border: 3px solid white;
+            top: 2.5rem;
+            left: -8px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        
+        /* Dynamic Tech Feed Section */
+        .tech-feed {
+            background-color: #f8fafc;
+        }
+        
+        .feed-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+        
+        .tech-filters {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .filter-btn {
+            padding: 0.5rem 1rem;
+            background: #e2e8f0;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .filter-btn.active, .filter-btn:hover {
+            background: var(--primary);
+            color: white;
+        }
+        
+        .feed-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .feed-item {
+            background: white;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .feed-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .feed-tag {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            background-color: #e0e7ff;
+            color: var(--primary-dark);
+            border-radius: 4px;
+            font-size: 0.8rem;
+            margin: 1rem;
+        }
+        
+        .feed-content {
+            padding: 1.5rem;
+        }
+        
+        .feed-content h3 {
+            margin-bottom: 0.75rem;
+            color: var(--primary);
+        }
+        
+        /* Call to Action */
+        .cta {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 4rem 0;
+        }
+        
+        .cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--secondary);
+            color: white;
+            padding: 4rem 0 2rem;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .footer-col h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+        
+        .footer-col h3:after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 3px;
+            background: var(--primary);
+            bottom: 0;
+            left: 0;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+        
+        .footer-links a {
+            color: #cbd5e1;
+            transition: var(--transition);
+        }
+        
+        .footer-links a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: #334155;
+            border-radius: 50%;
+            color: white;
+            transition: var(--transition);
+        }
+        
+        .social-links a:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #334155;
+            color: #94a3b8;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .hero-stats {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            
+            .timeline:before {
+                left: 30px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            
+            .timeline-item:nth-child(even) {
+                left: 0;
+            }
+            
+            .timeline-item:nth-child(odd):before,
+            .timeline-item:nth-child(even):before {
+                left: 22px;
+                right: auto;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-toggle {
+                display: block;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                right: -100%;
+                flex-direction: column;
+                background: white;
+                width: 80%;
+                max-width: 300px;
+                height: calc(100vh - 70px);
+                padding: 2rem;
+                box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+                transition: var(--transition);
+            }
+            
+            .nav-links.active {
+                right: 0;
+            }
+            
+            .nav-links li {
+                margin: 1.5rem 0;
+            }
+            
+            .hero h1 {
+                font-size: 2.3rem;
+            }
+            
+            .hero-image {
+                display: none;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            section {
+                padding: 3rem 0;
+            }
+            
+            .hero-stats {
+                grid-template-columns: 1fr;
+            }
+            
+            .cta h2 {
+                font-size: 2rem;
+            }
+            
+            .journey-step {
+                width: 100%;
+                margin-left: 0 !important;
+            }
+        }
+        
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .animate {
+            opacity: 0;
+            animation: fadeIn 0.6s ease forwards;
+        }
+    </style>
 </head>
-
 <body>
+    <!-- Header -->
+    <header>
+        <div class="container navbar">
+            <a href="#" class="logo">Ibrar<span>Ahmed</span></a>
+            <ul class="nav-links">
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#learning">Learning</a></li>
+                <li><a href="#tech-feed">Tech Feed</a></li>
+                <li><a href="#contact" class="btn btn-outline">Contact</a></li>
+            </ul>
+            <div class="mobile-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
 
-<!-- NAVBAR -->
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Systems Administrator Transitioning to DevOps & Cloud Engineering</h1>
+                <p>9+ years of enterprise IT infrastructure expertise now focused on building scalable, automated infrastructure solutions with modern DevOps practices and cloud technologies.</p>
+                <a href="#contact" class="btn">Let's Connect</a>
+                
+                <div class="hero-stats">
+                    <div class="stat-card">
+                        <div class="stat-number">9+</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">5</div>
+                        <div class="stat-label">Certifications</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">12+</div>
+                        <div class="stat-label">Tech Skills</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-image">
+            <svg viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#4f46e5" />
+                        <stop offset="100%" stop-color="#1e40af" />
+                    </linearGradient>
+                </defs>
+                <circle cx="300" cy="300" r="250" fill="url(#grad1)" opacity="0.1" />
+                <path d="M300 50 L450 150 L400 300 L450 450 L300 550 L150 450 L200 300 L150 150 Z" fill="none" stroke="url(#grad1)" stroke-width="2" />
+                <circle cx="300" cy="300" r="100" fill="url(#grad1)" opacity="0.2" />
+                <path d="M300 200 L350 250 L300 300 L250 250 Z" fill="url(#grad1)" />
+                <circle cx="300" cy="200" r="10" fill="#fff" />
+                <circle cx="350" cy="250" r="10" fill="#fff" />
+                <circle cx="300" cy="300" r="10" fill="#fff" />
+                <circle cx="250" cy="250" r="10" fill="#fff" />
+                <path d="M300 100 L400 200 L300 300 L200 200 Z" fill="none" stroke="#fff" stroke-width="1.5" stroke-dasharray="5,5" />
+                <path d="M300 400 L400 300 L300 200 L200 300 Z" fill="none" stroke="#fff" stroke-width="1.5" stroke-dasharray="5,5" />
+            </svg>
+        </div>
+    </section>
 
-<nav>
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-title">
+                <h2>Technical Expertise</h2>
+                <p>My journey from Systems Administration to DevOps Engineering</p>
+            </div>
+            
+            <div class="skills-container">
+                <div class="skill-category animate">
+                    <h3><i class="fas fa-server"></i> Systems Administration</h3>
+                    <ul class="skill-list">
+                        <li>
+                            Windows Server
+                            <div class="skill-level">
+                                <div class="skill-progress" style="width: 95%"></div>
+                            </div>
+                        </li>
+                        <li>
+                            Active Directory (AD DS, FSMO)
+                            <div class="skill-level">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </li>
+                        <li>
+                            Group Policy Management
+                            <div class="skill-level">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </li>
+                        <li>
+                            DNS/DHCP/WINS
+                            <div class="skill-level">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </li>
+                        <li>
+                            File System Permissions (NTFS)
+                            <div class="skill-level">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category animate">
+                    <h3><i class="fas fa-network-wired"></i> Network Administration</h3>
+                    <ul class="skill-list">
+                        <li>
+                            LAN/WAN Architecture
+                            <div class="skill-level">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </li>
+                        <li>
+                            VLAN Design
+                            <div class="skill-level">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </li>
+                        <li>
+                            Router & Firewall Management
+                            <div class="skill-level">
+                                <div class="skill-progress" style="width: 75%"></div>
+                            </div>
+                        </li>
+                        <li>
+                            Network Monitoring
+                            <div class="skill-level">
+                                <div class="skill-progress" style="width: 70%"></div>
+                            </div>
+                        </li>
+                        <li>
+                            VPN Setup & Management
+                            <div class="skill-level">
+                                <div class="skill-progress" style="width: 75%"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category animate">
+                    <h3><i class="fas fa-cloud"></i> DevOps & Cloud</h3>
+                    <ul class="skill-list">
+                        <li>
+                            AWS Cloud Services
+                            <div class="skill-level">
+                                <div class="skill-progress" style="width: 70%"></div>
+                            </div>
+                        </li>
+                        <li>
+                            Docker & Containerization
+                            <div class="skill-level">
+                                <div class="skill-progress" style="width: 75%"></div>
+                            </div>
+                        </li>
+                        <li>
+                            Kubernetes Orchestration
+                            <div class="skill-level">
+                                <div class="skill-progress" style="width: 65%"></div>
+                            </div>
+                        </li>
+                        <li>
+                            Terraform (IaC)
+                            <div class="skill-level">
+                                <div class="skill-progress" style="width: 65%"></div>
+                            </div>
+                        </li>
+                        <li>
+                            CI/CD Pipelines
+                            <div class="skill-level">
+                                <div class="skill-progress" style="width: 70%"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category animate">
+                    <h3><i class="fas fa-laptop-code"></i> Virtualization & Tools</h3>
+                    <ul class="skill-list">
+                        <li>
+                            Proxmox VE
+                            <div class="skill-level">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </li>
+                        <li>
+                            VMware ESXi
+                            <div class="skill-level">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </li>
+                        <li>
+                            Hyper-V
+                            <div class="skill-level">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </li>
+                        <li>
+                            Bash/Python Automation
+                            <div class="skill-level">
+                                <div class="skill-progress" style="width: 65%"></div>
+                            </div>
+                        </li>
+                        <li>
+                            Git Version Control
+                            <div class="skill-level">
+                                <div class="skill-progress" style="width: 75%"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<h2>Ibrar Mahammad</h2>
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <div class="section-title">
+                <h2>Professional Experience</h2>
+                <p>Enterprise-level systems administration and infrastructure management</p>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item animate">
+                    <div class="timeline-content">
+                        <h3>System Administrator</h3>
+                        <span class="date">2022 - 2024</span>
+                        <p>HKBK Group of Institutions, Bengaluru</p>
+                        <ul>
+                            <li>Managed enterprise Windows Server infrastructure and network devices for educational institution</li>
+                            <li>Configured switches, Wi-Fi access points, CCTV cameras, and biometric systems</li>
+                            <li>Performed network security design and troubleshooting</li>
+                            <li>Maintained flexible schedule for after-hours and emergency support</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="timeline-item animate">
+                    <div class="timeline-content">
+                        <h3>System Administrator</h3>
+                        <span class="date">2018 - 2019</span>
+                        <p>Gulwant Recruitment Pvt Ltd</p>
+                        <ul>
+                            <li>Provided remote technical support and system configuration services</li>
+                            <li>Installed and configured operating systems, networks, and applications</li>
+                            <li>Diagnosed and resolved hardware, software, and network issues</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="timeline-item animate">
+                    <div class="timeline-content">
+                        <h3>System Administrator</h3>
+                        <span class="date">2016 - 2017</span>
+                        <p>St. Mary's Engineering College</p>
+                        <ul>
+                            <li>Managed Windows Server infrastructure for educational institution</li>
+                            <li>Handled Microsoft Exchange Server administration and migration to Office 365</li>
+                            <li>Configured and maintained network infrastructure</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="timeline-item animate">
+                    <div class="timeline-content">
+                        <h3>Desktop Administrator</h3>
+                        <span class="date">2007 - 2011</span>
+                        <p>NHAI Project and Digital Solutions</p>
+                        <ul>
+                            <li>Provided desktop support and network administration</li>
+                            <li>Installed and configured hardware and software systems</li>
+                            <li>Diagnosed and resolved technical issues for end-users</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<ul>
-<li><a href="#about">About</a></li>
-<li><a href="#skills">Skills</a></li>
-<li><a href="#journey">Journey</a></li>
-<li><a href="#github">GitHub</a></li>
-</ul>
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-title">
+                <h2>DevOps Projects</h2>
+                <p>Hands-on learning and implementation of modern DevOps practices</p>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="project-card animate">
+                    <div class="project-img">
+                        <i class="fab fa-docker"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>aws-devops</h3>
+                        <p>Production-ready CI/CD pipeline implementation with AWS and Terraform for infrastructure automation.</p>
+                        <div class="project-tags">
+                            <span class="tag">AWS</span>
+                            <span class="tag">Terraform</span>
+                            <span class="tag">CI/CD</span>
+                        </div>
+                        <a href="https://github.com/ibrar900/aws-devops" class="btn btn-outline">View Project</a>
+                    </div>
+                </div>
+                
+                <div class="project-card animate">
+                    <div class="project-img">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>python-for-devops</h3>
+                        <p>Python automation scripts and tools for DevOps workflows, including infrastructure monitoring and management.</p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Automation</span>
+                            <span class="tag">Scripts</span>
+                        </div>
+                        <a href="https://github.com/ibrar900/python-for-devops" class="btn btn-outline">View Project</a>
+                    </div>
+                </div>
+                
+                <div class="project-card animate">
+                    <div class="project-img">
+                        <i class="fas fa-cubes"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>kubestarter</h3>
+                        <p>Kubernetes getting started guide with hands-on examples and best practices for container orchestration.</p>
+                        <div class="project-tags">
+                            <span class="tag">Kubernetes</span>
+                            <span class="tag">Containers</span>
+                            <span class="tag">Orchestration</span>
+                        </div>
+                        <a href="https://github.com/ibrar900/kubestarter" class="btn btn-outline">View Project</a>
+                    </div>
+                </div>
+                
+                <div class="project-card animate">
+                    <div class="project-img">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>DevSecOps-Zero-to-Hero</h3>
+                        <p>Complete guide to implementing security in DevOps pipelines, from basic concepts to advanced security practices.</p>
+                        <div class="project-tags">
+                            <span class="tag">Security</span>
+                            <span class="tag">DevSecOps</span>
+                            <span class="tag">CI/CD</span>
+                        </div>
+                        <a href="https://github.com/ibrar900/DevSecOps-Zero-to-Hero" class="btn btn-outline">View Project</a>
+                    </div>
+                </div>
+                
+                <div class="project-card animate">
+                    <div class="project-img">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>90DaysOfDevOps</h3>
+                        <p>Comprehensive DevOps learning journey covering infrastructure, automation, and cloud technologies with daily challenges.</p>
+                        <div class="project-tags">
+                            <span class="tag">Learning</span>
+                            <span class="tag">DevOps</span>
+                            <span class="tag">Challenge</span>
+                        </div>
+                        <a href="https://github.com/ibrar900/90DaysOfDevOps" class="btn btn-outline">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-</nav>
+    <!-- Learning Journey Section -->
+    <section id="learning" class="learning-journey">
+        <div class="container">
+            <div class="section-title">
+                <h2>Learning Journey</h2>
+                <p>Continuous learning path from Systems Administration to DevOps & Cloud Engineering</p>
+            </div>
+            
+            <div class="journey-container">
+                <div class="journey-step animate">
+                    <div class="journey-step-content">
+                        <h3>Foundation Building</h3>
+                        <span class="date">2022 - Present</span>
+                        <p>Deepening knowledge in core DevOps principles, infrastructure as code, and automation practices through hands-on projects and certification preparation.</p>
+                        <div class="project-tags">
+                            <span class="tag">90DaysOfDevOps</span>
+                            <span class="tag">Terraform</span>
+                            <span class="tag">CI/CD</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="journey-step animate">
+                    <div class="journey-step-content">
+                        <h3>Cloud Transition</h3>
+                        <span class="date">2023 - Present</span>
+                        <p>Building cloud infrastructure on AWS with Infrastructure-as-Code, implementing containerization with Docker, and orchestrating with Kubernetes.</p>
+                        <div class="project-tags">
+                            <span class="tag">AWS</span>
+                            <span class="tag">Docker</span>
+                            <span class="tag">Kubernetes</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="journey-step animate">
+                    <div class="journey-step-content">
+                        <h3>Security Integration</h3>
+                        <span class="date">2024 - Present</span>
+                        <p>Implementing DevSecOps principles and security automation into CI/CD pipelines to ensure secure and compliant infrastructure deployments.</p>
+                        <div class="project-tags">
+                            <span class="tag">DevSecOps</span>
+                            <span class="tag">Security</span>
+                            <span class="tag">Automation</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="journey-step animate">
+                    <div class="journey-step-content">
+                        <h3>Advanced Cloud Engineering</h3>
+                        <span class="date">2024 - Future</span>
+                        <p>Mastering multi-cloud deployment strategies, advanced Kubernetes administration, and AI/ML integration with DevOps workflows.</p>
+                        <div class="project-tags">
+                            <span class="tag">Multi-Cloud</span>
+                            <span class="tag">Kubernetes</span>
+                            <span class="tag">AI/ML</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- HERO -->
+    <!-- Dynamic Tech Feed Section -->
+    <section id="tech-feed" class="tech-feed">
+        <div class="container">
+            <div class="feed-header">
+                <div class="section-title" style="margin-bottom: 0;">
+                    <h2>DevOps & Cloud Technology Feed</h2>
+                    <p>Latest resources and learning materials automatically updated based on my current focus areas</p>
+                </div>
+                <div class="tech-filters">
+                    <button class="filter-btn active">All</button>
+                    <button class="filter-btn">AWS</button>
+                    <button class="filter-btn">Kubernetes</button>
+                    <button class="filter-btn">Terraform</button>
+                    <button class="filter-btn">Security</button>
+                </div>
+            </div>
+            
+            <div class="feed-grid">
+                <!-- AWS Resources -->
+                <div class="feed-item animate" data-category="aws">
+                    <span class="feed-tag">AWS</span>
+                    <div class="feed-content">
+                        <h3>AWS Solutions Architect Study Guide</h3>
+                        <p>Comprehensive guide to preparing for AWS Solutions Architect certification with hands-on labs and real-world scenarios.</p>
+                        <a href="https://aws.amazon.com/certification/" target="_blank" class="btn btn-outline" style="margin-top: 1rem;">Read More</a>
+                    </div>
+                </div>
+                
+                <div class="feed-item animate" data-category="aws">
+                    <span class="feed-tag">AWS</span>
+                    <div class="feed-content">
+                        <h3>Infrastructure as Code with AWS CloudFormation</h3>
+                        <p>Learn how to define and provision AWS infrastructure using CloudFormation templates for repeatable deployments.</p>
+                        <a href="https://aws.amazon.com/cloudformation/" target="_blank" class="btn btn-outline" style="margin-top: 1rem;">Read More</a>
+                    </div>
+                </div>
+                
+                <!-- Kubernetes Resources -->
+                <div class="feed-item animate" data-category="kubernetes">
+                    <span class="feed-tag">Kubernetes</span>
+                    <div class="feed-content">
+                        <h3>Kubernetes Networking Deep Dive</h3>
+                        <p>Understanding CNI, network policies, and service mesh implementations for complex Kubernetes networking requirements.</p>
+                        <a href="https://kubernetes.io/docs/concepts/cluster-administration/networking/" target="_blank" class="btn btn-outline" style="margin-top: 1rem;">Read More</a>
+                    </div>
+                </div>
+                
+                <div class="feed-item animate" data-category="kubernetes">
+                    <span class="feed-tag">Kubernetes</span>
+                    <div class="feed-content">
+                        <h3>Advanced Deployment Patterns</h3>
+                        <p>Implementing blue/green, canary, and rolling deployments in Kubernetes for zero-downtime application updates.</p>
+                        <a href="https://kubernetes.io/docs/concepts/workloads/controllers/deployment/" target="_blank" class="btn btn-outline" style="margin-top: 1rem;">Read More</a>
+                    </div>
+                </div>
+                
+                <!-- Terraform Resources -->
+                <div class="feed-item animate" data-category="terraform">
+                    <span class="feed-tag">Terraform</span>
+                    <div class="feed-content">
+                        <h3>Terraform Modules for Production</h3>
+                        <p>Creating reusable, versioned Terraform modules for enterprise infrastructure with best practices for state management.</p>
+                        <a href="https://developer.hashicorp.com/terraform/tutorials/modules" target="_blank" class="btn btn-outline" style="margin-top: 1rem;">Read More</a>
+                    </div>
+                </div>
+                
+                <div class="feed-item animate" data-category="terraform">
+                    <span class="feed-tag">Terraform</span>
+                    <div class="feed-content">
+                        <h3>Managing Multi-Environment Deployments</h3>
+                        <p>Strategies for managing development, staging, and production environments with Terraform workspaces and remote state.</p>
+                        <a href="https://developer.hashicorp.com/terraform/language/state/workspaces" target="_blank" class="btn btn-outline" style="margin-top: 1rem;">Read More</a>
+                    </div>
+                </div>
+                
+                <!-- Security Resources -->
+                <div class="feed-item animate" data-category="security">
+                    <span class="feed-tag">Security</span>
+                    <div class="feed-content">
+                        <h3>DevSecOps Implementation Guide</h3>
+                        <p>Integrating security scanning, vulnerability management, and policy enforcement into CI/CD pipelines.</p>
+                        <a href="https://www.cwcwiki.com/wiki/DevSecOps" target="_blank" class="btn btn-outline" style="margin-top: 1rem;">Read More</a>
+                    </div>
+                </div>
+                
+                <div class="feed-item animate" data-category="security">
+                    <span class="feed-tag">Security</span>
+                    <div class="feed-content">
+                        <h3>Secrets Management Best Practices</h3>
+                        <p>Securing sensitive information in infrastructure code with HashiCorp Vault, AWS Secrets Manager, and other tools.</p>
+                        <a href="https://www.vaultproject.io/" target="_blank" class="btn btn-outline" style="margin-top: 1rem;">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<section class="hero">
+    <!-- Call to Action -->
+    <section id="contact" class="cta">
+        <div class="container">
+            <h2>Ready to Transform Your Infrastructure?</h2>
+            <p>With 9+ years of systems administration experience and a strong foundation in modern DevOps practices, I'm ready to help build scalable, automated infrastructure solutions for your organization.</p>
+            <div class="cta-buttons">
+                <a href="mailto:ibrar@example.com" class="btn">Get In Touch</a>
+                <a href="#projects" class="btn btn-outline">View My Projects</a>
+            </div>
+        </div>
+    </section>
 
-<div>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Ibrar Ahmed</h3>
+                    <p>Systems & Network Administrator transitioning to DevOps and Cloud Engineering with 9+ years of enterprise IT infrastructure experience.</p>
+                    <div class="social-links">
+                        <a href="https://github.com/ibrar900" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#skills">Technical Skills</a></li>
+                        <li><a href="#experience">Professional Experience</a></li>
+                        <li><a href="#projects">DevOps Projects</a></li>
+                        <li><a href="#learning">Learning Journey</a></li>
+                        <li><a href="#tech-feed">Tech Resources</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Certifications</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Microsoft Certified Professional (MCP)</a></li>
+                        <li><a href="#">AWS Solutions Architect (In Progress)</a></li>
+                        <li><a href="#">CCNA/CCNP (In Progress)</a></li>
+                        <li><a href="#">Docker Mastery</a></li>
+                        <li><a href="#">Infrastructure-as-Code with Terraform</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Current Focus</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">AWS Cloud Services</a></li>
+                        <li><a href="#">Kubernetes Orchestration</a></li>
+                        <li><a href="#">Terraform IaC</a></li>
+                        <li><a href="#">DevSecOps Implementation</a></li>
+                        <li><a href="#">CI/CD Pipeline Design</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2026 Ibrar Ahmed. All rights reserved. | Systems & Network Administrator | DevOps Engineer | Cloud Infrastructure Specialist</p>
+            </div>
+        </div>
+    </footer>
 
-<h1>Hello, I'm <span>Ibrar</span></h1>
-
-<p>
-System Engineer passionate about DevOps, Linux infrastructure,
-automation, and emerging AI-powered engineering workflows.
-</p>
-
-<a class="hero-btn" href="https://github.com/ibrar900" target="_blank">
-View My GitHub
-</a>
-
-</div>
-
-</section>
-
-<!-- ABOUT -->
-
-<section id="about" class="about">
-
-<h2 class="section-title">About Me</h2>
-
-<p>
-I am a System Engineer focused on building strong foundations in
-DevOps engineering and Linux infrastructure.
-My learning journey includes containerization, networking,
-shell scripting, Git workflows, and automation practices.
-
-Currently I am exploring modern DevOps ecosystems combined with
-AI technologies such as LLM tools and intelligent development workflows.
-</p>
-
-</section>
-
-<!-- SKILLS -->
-
-<section id="skills">
-
-<h2 class="section-title">Skills</h2>
-
-<div class="skills">
-
-<div class="skill">Linux Administration</div>
-<div class="skill">Shell Scripting</div>
-<div class="skill">Git & GitHub</div>
-<div class="skill">Docker Containers</div>
-<div class="skill">Networking Fundamentals</div>
-<div class="skill">DevOps Foundations</div>
-
-</div>
-
-</section>
-
-<!-- JOURNEY -->
-
-<section id="journey">
-
-<h2 class="section-title">Learning Journey</h2>
-
-<div class="timeline">
-
-<div class="timeline-item">
-Started DevOps journey focusing on Linux fundamentals and system operations.
-</div>
-
-<div class="timeline-item">
-Learning Git workflows and collaborative development practices.
-</div>
-
-<div class="timeline-item">
-Exploring Docker containerization and modern infrastructure patterns.
-</div>
-
-<div class="timeline-item">
-Building knowledge around AI tools, LLM workflows, and AI-driven DevOps.
-</div>
-
-</div>
-
-</section>
-
-<!-- GITHUB -->
-
-<section id="github">
-
-<h2 class="section-title">GitHub</h2>
-
-<p>
-Check out my projects and learning repositories on GitHub.
-</p>
-
-<br>
-
-<a class="hero-btn" href="https://github.com/ibrar900" target="_blank">
-Visit GitHub Profile
-</a>
-
-</section>
-
-<footer>
-
-<p>© 2026 Ibrar | DevOps Learning Journey</p>
-
-</footer>
-
+    <script>
+        // Mobile Navigation Toggle
+        const mobileToggle = document.querySelector('.mobile-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        
+        mobileToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileToggle.innerHTML = navLinks.classList.contains('active') ? 
+                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                mobileToggle.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+        
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            header.classList.toggle('scrolled', window.scrollY > 50);
+        });
+        
+        // Tech feed filtering
+        document.querySelectorAll('.filter-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                // Update active button
+                document.querySelectorAll('.filter-btn').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                button.classList.add('active');
+                
+                // Filter items
+                const category = button.textContent.toLowerCase();
+                document.querySelectorAll('.feed-item').forEach(item => {
+                    if (category === 'all' || item.dataset.category === category) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+        
+        // Animation on scroll
+        const animateElements = document.querySelectorAll('.animate');
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = 1;
+                    entry.target.style.transform = 'translateY(0)';
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+        
+        animateElements.forEach(element => {
+            element.style.opacity = 0;
+            element.style.transform = 'translateY(20px)';
+            element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(element);
+        });
+        
+        // Initialize animations for elements already in view
+        setTimeout(() => {
+            animateElements.forEach(element => {
+                if (isElementInViewport(element)) {
+                    element.style.opacity = 1;
+                    element.style.transform = 'translateY(0)';
+                }
+            });
+        }, 300);
+        
+        function isElementInViewport(el) {
+            const rect = el.getBoundingClientRect();
+            return (
+                rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.bottom >= 0
+            );
+        }
+    </script>
 </body>
 </html>
