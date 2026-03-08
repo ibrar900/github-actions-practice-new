@@ -1,7 +1,7 @@
 # Name of the Workflow
 name: Hello Workflows
 
-# Trigger the workflow on push to the main branch
+# runs on automatic trigger, whenever change is pushed to branch ( deployment)
 on:
   push:
     branches: [main]
