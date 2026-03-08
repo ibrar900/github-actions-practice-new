@@ -1,15 +1,12 @@
-# Follow the class videos and practise and understand what we are doing
-# Video is Github Actions Fundamentals 1st March
-
 ```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ibrar | DevOps & System Engineer</title>
+<title>Ibrar | DevOps Engineer</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 
 <style>
 
@@ -17,17 +14,17 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Poppins',sans-serif;
+font-family:'Inter',sans-serif;
 scroll-behavior:smooth;
 }
 
 body{
-background:#0b0f19;
+background:#0a0f1c;
 color:white;
 overflow-x:hidden;
 }
 
-/* NAVBAR */
+/* NAV */
 
 nav{
 position:fixed;
@@ -36,27 +33,27 @@ width:100%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:20px 10%;
+padding:20px 8%;
 background:rgba(255,255,255,0.05);
-backdrop-filter:blur(10px);
-z-index:100;
+backdrop-filter:blur(12px);
+z-index:1000;
 }
 
 nav h2{
-color:#00e5ff;
+color:#00eaff;
 }
 
 nav a{
-color:white;
-text-decoration:none;
 margin-left:25px;
+text-decoration:none;
+color:white;
+opacity:.7;
 font-size:14px;
-opacity:.8;
 }
 
 nav a:hover{
 opacity:1;
-color:#00e5ff;
+color:#00eaff;
 }
 
 /* HERO */
@@ -68,58 +65,79 @@ flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
-background:linear-gradient(120deg,#0b0f19,#121a2c);
+padding:0 20px;
 }
 
 .hero h1{
-font-size:55px;
-background:linear-gradient(90deg,#00e5ff,#00ffa6);
+font-size:58px;
+background:linear-gradient(90deg,#00eaff,#00ff9d);
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
 }
 
-.hero p{
+.typing{
 margin-top:15px;
-opacity:.7;
-font-size:18px;
-max-width:650px;
+font-size:20px;
+opacity:.8;
 }
 
 .hero button{
-margin-top:30px;
+margin-top:35px;
 padding:14px 35px;
-border:none;
 border-radius:30px;
-background:#00e5ff;
-color:#000;
+border:none;
+background:#00eaff;
 font-weight:600;
 cursor:pointer;
-transition:.3s;
 }
 
 .hero button:hover{
 transform:scale(1.05);
 }
 
+/* FLOATING ICONS */
+
+.floating{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+z-index:-1;
+overflow:hidden;
+}
+
+.floating img{
+position:absolute;
+width:40px;
+opacity:.08;
+animation:float 20s linear infinite;
+}
+
+@keyframes float{
+0%{transform:translateY(110vh)}
+100%{transform:translateY(-10vh)}
+}
+
 /* SECTION */
 
 section{
-padding:100px 10%;
+padding:100px 8%;
 }
 
 /* GLASS CARD */
 
 .card{
 background:rgba(255,255,255,0.05);
-padding:35px;
-border-radius:15px;
-backdrop-filter:blur(10px);
+padding:40px;
+border-radius:16px;
+backdrop-filter:blur(12px);
 transition:.4s;
 }
 
 .card:hover{
 transform:translateY(-8px);
-box-shadow:0 10px 30px rgba(0,0,0,.5);
+box-shadow:0 20px 40px rgba(0,0,0,.4);
 }
 
 /* ABOUT */
@@ -143,12 +161,12 @@ margin-top:40px;
 text-align:center;
 padding:25px;
 border-radius:12px;
-background:rgba(255,255,255,0.05);
+background:rgba(255,255,255,0.04);
 transition:.3s;
 }
 
 .skill:hover{
-background:rgba(0,229,255,0.1);
+background:rgba(0,234,255,.12);
 transform:scale(1.05);
 }
 
@@ -157,20 +175,40 @@ width:50px;
 margin-bottom:10px;
 }
 
-/* PROJECT */
+/* PIPELINE */
 
-.projects{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:30px;
+.pipeline{
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
 margin-top:40px;
+}
+
+.stage{
+text-align:center;
+padding:25px;
+background:rgba(255,255,255,0.05);
+border-radius:12px;
+width:160px;
+transition:.3s;
+}
+
+.stage:hover{
+transform:scale(1.08);
+background:rgba(0,234,255,.1);
+}
+
+.arrow{
+font-size:28px;
+opacity:.5;
 }
 
 /* FOOTER */
 
 footer{
 text-align:center;
-padding:40px;
+padding:50px;
 opacity:.6;
 }
 
@@ -179,7 +217,7 @@ opacity:.6;
 .reveal{
 opacity:0;
 transform:translateY(60px);
-transition:all .8s ease;
+transition:.8s;
 }
 
 .reveal.active{
@@ -189,14 +227,23 @@ transform:translateY(0);
 
 /* MOBILE */
 
-@media(max-width:800px){
+@media(max-width:900px){
 
 .about{
 grid-template-columns:1fr;
 }
 
+.pipeline{
+flex-direction:column;
+gap:20px;
+}
+
+.arrow{
+display:none;
+}
+
 .hero h1{
-font-size:40px;
+font-size:42px;
 }
 
 }
@@ -206,27 +253,36 @@ font-size:40px;
 
 <body>
 
+<div class="floating">
+
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" style="left:10%;animation-duration:18s">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" style="left:30%;animation-duration:22s">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" style="left:60%;animation-duration:25s">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" style="left:80%;animation-duration:20s">
+
+</div>
+
 <nav>
+
 <h2>Ibrar</h2>
+
 <div>
 <a href="#about">About</a>
-<a href="#skills">Skills</a>
-<a href="#projects">Projects</a>
+<a href="#skills">Stack</a>
+<a href="#pipeline">Pipeline</a>
 <a href="https://github.com/ibrar900" target="_blank">GitHub</a>
 </div>
+
 </nav>
 
 <section class="hero">
 
-<h1>DevOps & System Engineer</h1>
+<h1>Ibrar</h1>
 
-<p>
-Passionate about Linux, automation, containerization and
-building modern AI-driven DevOps infrastructure.
-</p>
+<div class="typing" id="typing"></div>
 
 <button onclick="window.open('https://github.com/ibrar900')">
-Explore My Work
+View My GitHub
 </button>
 
 </section>
@@ -238,14 +294,13 @@ Explore My Work
 
 <h2>About Me</h2>
 
-<p style="margin-top:15px;line-height:1.6;opacity:.8">
+<p style="margin-top:15px;line-height:1.7;opacity:.85">
 
-I'm Ibrar, a System Engineer focused on DevOps, Linux infrastructure
-and automation. My learning journey includes containerization,
-CI/CD pipelines, cloud-native tools and AI-powered developer workflows.
+System Engineer passionate about DevOps, Linux infrastructure,
+automation and modern AI-powered development workflows.
 
-I enjoy exploring how modern infrastructure is evolving through
-automation and intelligent tooling.
+I enjoy learning container technologies, CI/CD automation
+and building scalable infrastructure environments.
 
 </p>
 
@@ -253,16 +308,16 @@ automation and intelligent tooling.
 
 <div class="card">
 
-<h2>What I'm Learning</h2>
+<h2>Focus Areas</h2>
 
-<ul style="margin-top:15px;line-height:2;opacity:.8">
+<ul style="margin-top:15px;line-height:2">
 
-<li>Linux Advanced Administration</li>
-<li>Docker & Containerization</li>
-<li>Git & GitHub Automation</li>
-<li>Shell Scripting</li>
-<li>AI DevOps Workflows</li>
-<li>Cloud Native Infrastructure</li>
+<li>Linux System Administration</li>
+<li>Docker & Containers</li>
+<li>Shell Automation</li>
+<li>Git & GitHub</li>
+<li>DevOps Tooling</li>
+<li>AI for Developers</li>
 
 </ul>
 
@@ -273,7 +328,7 @@ automation and intelligent tooling.
 
 <section id="skills" class="reveal">
 
-<h2>DevOps Stack</h2>
+<h2>DevOps Tech Stack</h2>
 
 <div class="skills">
 
@@ -285,6 +340,11 @@ automation and intelligent tooling.
 <div class="skill">
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg">
 <p>Docker</p>
+</div>
+
+<div class="skill">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg">
+<p>Kubernetes</p>
 </div>
 
 <div class="skill">
@@ -302,74 +362,66 @@ automation and intelligent tooling.
 <p>Shell</p>
 </div>
 
-<div class="skill">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg">
-<p>Kubernetes</p>
-</div>
-
 </div>
 
 </section>
 
 
-<section id="projects" class="reveal">
+<section id="pipeline" class="reveal">
 
-<h2>Projects & Learning Work</h2>
+<h2>Typical DevOps Pipeline</h2>
 
-<div class="projects">
+<div class="pipeline">
 
-<div class="card">
-
-<h3>DevOps Learning Lab</h3>
-
-<p style="margin-top:10px;opacity:.8">
-
-Hands-on experiments with Docker containers, Linux automation,
-networking fundamentals and CI/CD workflows.
-
-</p>
-
+<div class="stage">
+<p>Code</p>
 </div>
 
-<div class="card">
+<div class="arrow">→</div>
 
-<h3>Shell Automation Scripts</h3>
-
-<p style="margin-top:10px;opacity:.8">
-
-Collection of Bash scripts for automation tasks,
-file management, system monitoring and DevOps workflows.
-
-</p>
-
+<div class="stage">
+<p>Build</p>
 </div>
 
-<div class="card">
+<div class="arrow">→</div>
 
-<h3>AI DevOps Exploration</h3>
+<div class="stage">
+<p>Docker Image</p>
+</div>
 
-<p style="margin-top:10px;opacity:.8">
+<div class="arrow">→</div>
 
-Exploring LLM-powered developer tools,
-AI coding assistants and MCP server integrations.
-
-</p>
-
+<div class="stage">
+<p>Deploy</p>
 </div>
 
 </div>
 
 </section>
-
 
 <footer>
 
-<p>© 2026 Ibrar | DevOps & System Engineering</p>
+<p>© 2026 Ibrar — DevOps & Infrastructure Engineering</p>
 
 </footer>
 
-
 <script>
+
+/* typing effect */
+
+const text="System Engineer • DevOps Learner • Linux Enthusiast";
+let index=0;
+
+function type(){
+document.getElementById("typing").innerHTML=text.slice(0,index++)
+if(index>text.length){index=0}
+setTimeout(type,80)
+}
+
+type()
+
+
+/* scroll reveal */
 
 function reveal(){
 
@@ -392,7 +444,6 @@ reveals[i].classList.add("active")
 window.addEventListener("scroll",reveal)
 
 </script>
-
 
 </body>
 </html>
