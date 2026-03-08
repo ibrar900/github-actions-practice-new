@@ -3,6 +3,7 @@ name: Portfolio # Name of workflow
 on: # trigger the workflow when there a push command to main branch
     push:
         branches: [main]
+    workflow_dispatch:
 
 permissions: # permissions give globally
       pages: write # permission to peploy to pages
