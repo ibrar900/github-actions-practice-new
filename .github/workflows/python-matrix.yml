@@ -7,15 +7,20 @@ on:
 jobs:
     validate: # name of job
         runs-on: ubuntu-latest # the job runs on operating system
+        strategy:
+            fail-fast:
+            matrix:
+                python version: ["3.9", "3.10", "3.11", "3.12", "3.13"] # different python versions to test
+                lines: [1,2,3,4] # different lines to test
 
         steps:
           - name: checkout code
             uses: actions/checkout@v4
 
-          - name: setup python
+          - name: setup python ${{matrix.python-version}}
             uses: actions/setup-python@v5
             with:
-                python-version: 3.13
+                python-version: ${{matrix.python-version}}
 
           - name: install dependencies
             run: pip install -r requirements.txt
