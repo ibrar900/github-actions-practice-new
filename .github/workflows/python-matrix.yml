@@ -8,7 +8,7 @@ jobs:
     validate: # name of job
         runs-on: ubuntu-latest # the job runs on operating system
         strategy:
-            fail-fast:
+            fail-fast: false # if one of the matrix fails, it will not stop the others from runnning
             matrix:
                 python version: ["3.9", "3.10", "3.11", "3.12", "3.13"] # different python versions to test
                 lines: [1,2,3,4] # different lines to test
