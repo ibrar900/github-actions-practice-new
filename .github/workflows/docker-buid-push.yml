@@ -25,9 +25,9 @@ jobs:
                 context: .
                 push: true
                 tags: |
-                  ${{ vars.DOCKERHUB_USER }}/github-actions-practice-new:${{ github.ref_name }}
-                  ${{ vars.DOCKERHUB_USER }}/github-actions-practice-new:latest
-                  ${{ vars.DOCKERHUB_USER }}/github-actions-practice-new:${{ github.sha }}
+                  ${{ vars.DOCKERHUB_USER }}/github-actions-app:${{ github.ref_name }}
+                  ${{ vars.DOCKERHUB_USER }}/github-actions-app:latest
+                  ${{ vars.DOCKERHUB_USER }}/github-actions-app:${{ github.sha }}
 
 
 
