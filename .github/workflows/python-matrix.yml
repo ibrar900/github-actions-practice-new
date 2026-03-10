@@ -3,6 +3,7 @@ name: python lint # syntax check for pyhton code
 on:
     push:
         branches: [main]
+    workflow_dispatch:
 
 jobs:
     validate: # name of job
@@ -27,3 +28,4 @@ jobs:
 
           - name: run linter
             run: flake8 app.py
+
