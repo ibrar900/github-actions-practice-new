@@ -3,9 +3,11 @@
 
 name: Code Quality
 on:
-  push:
-    branches:
-      - main
+#  push:
+#   branches:
+#      - main
+  workflow_call:
+
 jobs:
   validate:
     runs-on: ubuntu-latest
