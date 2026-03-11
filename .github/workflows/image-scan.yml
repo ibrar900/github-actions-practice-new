@@ -19,6 +19,9 @@ jobs:
           username: ${{ vars.DOCKERHUB_USER }}
           password: ${{secrets.DOCKERHUB_TOKEN}}
 
+      - name: images list images
+        run: docker images
+
       - name: Trivy Scanner
         uses: aquasecurity/trivy-action@0.35.0
         with:
