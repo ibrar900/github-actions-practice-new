@@ -6,7 +6,12 @@ on:
 #  workflow_call:
 
 jobs:
+  build:
+    uses: ./.github/workflows/docker-build-push.yml
+    secrets: inherit
+
   image-scanner:
+    needs: build
     runs-on: ubuntu-latest
 
     steps:
@@ -19,11 +24,9 @@ jobs:
           username: ${{ vars.DOCKERHUB_USER }}
           password: ${{secrets.DOCKERHUB_TOKEN}}
 
-      - name: images list images
-        run: docker images
-
       - name: Trivy Scanner
         uses: aquasecurity/trivy-action@0.35.0
         with:
           image-ref: ${{ vars.DOCKERHUB_USER }}/github-actions-app:${{ github.sha }}
           severity: "CRITICAL"
+          exit-code: "1"
