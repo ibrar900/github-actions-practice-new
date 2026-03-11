@@ -2,10 +2,10 @@
 name: Docker Lint
 
 on:
-  #  workflow_call:
-  push:
-    branches:
-      - main
+  workflow_call:
+#  push:
+#    branches:
+#      - main
 jobs:
   validate-dockerfile:
     runs-on: ubuntu-latest
