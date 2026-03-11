@@ -3,7 +3,10 @@
 name: Code Quality
 
 on:
-    workflow_call:
+    push: 
+        branches: [main]
+
+#    workflow_call:
 
 jobs:
     validate:
