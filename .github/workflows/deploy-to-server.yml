@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: SSH to batch 10lab server
+      - name: SSH to batch10lab server
         uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.EC2_SSH_HOST }}
@@ -19,4 +19,4 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
             echo "Staring Deployment"
-            mkdir devops
+            mkdir -p devops
