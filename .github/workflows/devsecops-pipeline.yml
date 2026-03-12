@@ -27,4 +27,3 @@ jobs:
   trivy:
     needs: [build]
     uses: ./.github/workflows/trivy-scan.yml
-    secrets: inherit
